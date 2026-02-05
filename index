@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RezCafe — Volunteer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#444;
+      --card:#f4f4f4;
+      --border:#e6e6e6;
+      --btn:#111;
+      --btnText:#fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.35;
+    }
+    .wrap{
+      max-width:760px;
+      margin:0 auto;
+      padding:28px 18px 44px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:44px;height:44px;border-radius:12px;
+      background:var(--card);
+      border:1px solid var(--border);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;
+    }
+    h1{
+      font-size:40px;
+      margin:14px 0 6px;
+      letter-spacing:-0.5px;
+    }
+    .sub{
+      font-size:18px;
+      color:var(--muted);
+      margin:0 0 18px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+      margin:14px 0;
+    }
+    .card h2{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .btns{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+    a.btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      background:var(--btn);
+      color:var(--btnText);
+      padding:14px 14px;
+      border-radius:14px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    a.btn.secondary{
+      background:#fff;
+      color:#111;
+      border:1px solid #111;
+    }
+    .fine{
+      margin-top:14px;
+      font-size:13px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">
+      <div class="logo">RZ</div>
+      <div>
+        <div style="font-weight:800;">RezCafe</div>
+        <div style="font-size:13px;color:var(--muted);">Coffee volunteers</div>
+      </div>
+    </div>
+
+    <h1>Help Wanted</h1>
+    <p class="sub">Latte art not required. Buttons will be explained.</p>
+
+    <div class="card">
+      <h2>What you’d do</h2>
+      <ul>
+        <li>Serve coffee + be friendly in the line</li>
+        <li>Help with a simple role (equipment close / space reset)</li>
+        <li><strong>Serve both before + after the 2nd service</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Interested?</h2>
+      <div class="btns">
+        <a class="btn" href="sms:+1YOURNUMBER?&body=Hi!%20I%E2%80%99m%20interested%20in%20helping%20with%20RezCafe.%20Can%20you%20tell%20me%20more%3F">Text Robb</a>
+        <a class="btn secondary" href="mailto:YOUREMAIL@example.com?subject=RezCafe%20Volunteer&body=Hi!%20I%E2%80%99m%20interested%20in%20helping%20with%20RezCafe.%20Can%20you%20tell%20me%20more%3F">Email Robb</a>
+      </div>
+      <div class="fine">You’ll get a quick reply with next steps + training details.</div>
+    </div>
+  </main>
+</body>
+</html>
