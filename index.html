@@ -3,129 +3,153 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RezCafe — Volunteer</title>
+  <title>RezCafé — Contact</title>
+
+  <!-- Optional: clean modern font similar to your sign -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,600&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#ffffff;
-      --text:#111111;
-      --muted:#444;
-      --card:#f4f4f4;
-      --border:#e6e6e6;
-      --btn:#111;
-      --btnText:#fff;
+      --ink:#111;
+      --muted:#333;
+      --bg:#fff;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background:var(--bg);
-      color:var(--text);
-      line-height:1.35;
+      color:var(--ink);
+      font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
+
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 18px 64px;
+    }
+
     .wrap{
-      max-width:760px;
-      margin:0 auto;
-      padding:28px 18px 44px;
+      width:100%;
+      max-width:900px;
+      text-align:center;
     }
+
+    /* Top logo row */
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
-      margin-bottom:18px;
+      justify-content:center;
+      gap:18px;
+      margin-top:8px;
     }
-    .logo{
-      width:44px;height:44px;border-radius:12px;
-      background:var(--card);
-      border:1px solid var(--border);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:800;
+
+    .brand img{
+      height:62px;
+      width:auto;
+      display:block;
     }
-    h1{
-      font-size:40px;
-      margin:14px 0 6px;
-      letter-spacing:-0.5px;
+
+    /* Tagline */
+    .tagline{
+      margin:36px 0 0;
+      font-size:20px;
+      font-style:italic;
+      font-weight:600;
+      color:var(--ink);
     }
-    .sub{
-      font-size:18px;
-      color:var(--muted);
-      margin:0 0 18px;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:16px;
-      margin:14px 0;
-    }
-    .card h2{
-      margin:0 0 10px;
-      font-size:18px;
-    }
-    ul{margin:8px 0 0 18px}
-    li{margin:6px 0}
-    .btns{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:10px;
-      margin-top:14px;
-    }
-    a.btn{
+
+    /* Contact section */
+    .contact{
+      margin-top:96px;
       display:flex;
       align-items:center;
       justify-content:center;
-      text-decoration:none;
-      background:var(--btn);
-      color:var(--btnText);
-      padding:14px 14px;
-      border-radius:14px;
-      font-weight:700;
-      letter-spacing:0.2px;
+      gap:26px;
     }
-    a.btn.secondary{
-      background:#fff;
-      color:#111;
-      border:1px solid #111;
+
+    .contact .left{
+      text-align:center;
+      min-width:260px;
     }
-    .fine{
-      margin-top:14px;
-      font-size:13px;
+
+    .contact .label{
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .contact .name{
+      font-weight:600;
+      margin:2px 0 6px;
+    }
+
+    .contact a, .contact .text{
+      display:block;
       color:var(--muted);
+      text-decoration:none;
+      margin:2px 0;
+      font-weight:500;
+    }
+
+    .contact a:hover{
+      text-decoration:underline;
+    }
+
+    .photo{
+      width:170px;
+      height:170px;
+      object-fit:cover;
+      border-radius:0;         /* square like your sign */
+      display:block;
+    }
+
+    /* Mobile: stack photo under text */
+    @media (max-width:600px){
+      .brand img{height:54px}
+      .tagline{font-size:18px}
+      .contact{
+        margin-top:64px;
+        flex-direction:column;
+        gap:18px;
+      }
+      .photo{
+        width:190px;
+        height:190px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <div class="brand">
-      <div class="logo">RZ</div>
-      <div>
-        <div style="font-weight:800;">RezCafe</div>
-        <div style="font-size:13px;color:var(--muted);">Coffee volunteers</div>
+  <main class="page">
+    <div class="wrap">
+
+      <!-- Top logo row -->
+      <div class="brand">
+        <img src="logo.png" alt="RezCafé logo">
       </div>
-    </div>
 
-    <h1>Help Wanted</h1>
-    <p class="sub">Latte art not required. Buttons will be explained.</p>
+      <!-- Tagline -->
+      <p class="tagline">You don’t even have to like coffee.</p>
 
-    <div class="card">
-      <h2>What you’d do</h2>
-      <ul>
-        <li>Serve coffee + be friendly in the line</li>
-        <li>Help with a simple role (equipment close / space reset)</li>
-        <li><strong>Serve both before + after the 2nd service</strong></li>
-      </ul>
-    </div>
+      <!-- Contact block -->
+      <section class="contact" aria-label="Contact">
+        <div class="left">
+          <div class="label">Talk to this guy:</div>
+          <div class="name">Robb Robins</div>
 
-    <div class="card">
-      <h2>Interested?</h2>
-      <div class="btns">
-        <a class="btn" href="sms:+1YOURNUMBER?&body=Hi!%20I%E2%80%99m%20interested%20in%20helping%20with%20RezCafe.%20Can%20you%20tell%20me%20more%3F">Text Robb</a>
-        <a class="btn secondary" href="mailto:YOUREMAIL@example.com?subject=RezCafe%20Volunteer&body=Hi!%20I%E2%80%99m%20interested%20in%20helping%20with%20RezCafe.%20Can%20you%20tell%20me%20more%3F">Email Robb</a>
-      </div>
-      <div class="fine">You’ll get a quick reply with next steps + training details.</div>
+          <!-- Tap-to-text + tap-to-call friendly -->
+          <a href="tel:+16309037366">630-903-7366</a>
+          <a href="mailto:robb.robins@gmail.com">robb.robins@gmail.com</a>
+        </div>
+
+        <img class="photo" src="robb.jpg" alt="Robb holding a RezCafé mug">
+      </section>
+
     </div>
   </main>
 </body>
-</html>  
+</html>
